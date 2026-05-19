@@ -17,6 +17,7 @@ const navItems: { label: string; page: Page }[] = [
   { label: 'Join', page: 'join' },
   { label: 'Ranks', page: 'ranks' },
   { label: 'Vote', page: 'vote' },
+  { label: 'Pavillion', page: 'pavillion' },
   { label: 'Skull Race', page: 'skull-race' },
 ];
 
@@ -65,6 +66,9 @@ const searchableContent: Record<Page, { title: string; content: string; section:
     { title: 'Hero Rank', content: 'Advanced tools and repair features', section: 'Ranks' },
     { title: 'Nexus Rank', content: 'Permanent rank with powerful utilities', section: 'Ranks' },
     { title: 'Phantom Rank', content: 'Top-tier rank with maximum perks', section: 'Ranks' },
+  ],
+  pavillion: [
+    { title: 'Ploofyz Pavillion', content: 'Archive of Ploofyz events, appreciation posts, winners, and special occasions', section: 'Archive'},
   ],
   'skull-race': [
     { title: 'Skull Race', content: 'Weekly event for individual and team categories', section: 'Hero' },
