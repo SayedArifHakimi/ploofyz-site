@@ -96,10 +96,75 @@ export default function PavillionDetail() {
           </div>*/}
           
           
-          {/* short paragraph */}
-          <p className="pavillion-detail-article">
-            {event.article}
-          </p>
+          {event.news ? (
+            <article className="pavillion-news-article">
+              <section className="pavillion-news-intro">
+                {event.news.intro.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </section>
+
+              {event.news.stats && (
+                <section className="pavillion-news-section">
+                  <p className="pavillion-kicker">BY THE NUMBERS</p>
+                  <div className="pavillion-news-stats">
+                    {event.news.stats.map((stat) => (
+                      <div key={stat.label}>
+                        <strong>{stat.value}</strong>
+                        <span>{stat.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {event.news.highlights && (
+                <section className="pavillion-news-section">
+                  <p className="pavillion-kicker">EVENT HIGHLIGHTS</p>
+                  <h2>What happened?</h2>
+                  <ul className="pavillion-news-list">
+                    {event.news.highlights.map((highlight) => (
+                      <li key={highlight}>{highlight}</li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
+              {event.news.thankYou && (
+                <section className="pavillion-news-section">
+                  <p className="pavillion-kicker">THANK YOU</p>
+                  <h2>The people who made it possible</h2>
+                  <ul className="pavillion-news-list">
+                    {event.news.thankYou.map((message) => (
+                      <li key={message}>{message}</li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
+              {event.news.improvements && (
+                <section className="pavillion-news-section">
+                  <p className="pavillion-kicker">NEXT TIME</p>
+                  <h2>Things we can improve</h2>
+                  <ul className="pavillion-news-list">
+                    {event.news.improvements.map((improvement) => (
+                      <li key={improvement}>{improvement}</li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
+              {event.news.closing && (
+                <p className="pavillion-news-closing">{event.news.closing}</p>
+              )}
+            </article>
+          ) : (
+            event.article && (
+              <p className="pavillion-detail-article">
+                {event.article}
+              </p>
+            )
+          )}
 
           {event.images.length > 0 && (
             <section className="pavillion-carousel">
