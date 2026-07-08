@@ -16,6 +16,18 @@ export type PavillionTikTokVideo = {
   url: string;
 };
 
+export type PavillionNewsContent = {
+  intro: string[];
+  stats?: Array<{
+    value: string;
+    label: string;
+  }>;
+  highlights?: string[];
+  thankYou?: string[];
+  improvements?: string[];
+  closing?: string;
+};
+
 export type PavillionEvent = {
   slug: string;
   title: string;
@@ -26,6 +38,7 @@ export type PavillionEvent = {
   updatedBy: string;
   shortDescription: string;
   description: string;
+  news?: PavillionNewsContent;
   tiktokVideos?: PavillionTikTokVideo[];
   images: PavillionEventImage[];
   article: string;

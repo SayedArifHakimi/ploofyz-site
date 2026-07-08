@@ -1,4 +1,10 @@
 import type { PavillionEvent } from '../types';
+import { pavillionMedia } from '../media.generated';
+
+const bingoCaptions = [
+  'Bingo Night Winners - Map 1 to Map 3',
+  'Bingo Night Winners - Map 4',
+];
 
 export const bingoNight16May2026: PavillionEvent = {
   slug: '2026-05-16-bingo-night',
@@ -8,90 +14,37 @@ export const bingoNight16May2026: PavillionEvent = {
   dateLabel: '16 May 2026',
   monthGroup: 'May 2026',
   updatedBy: 'Bibimbapqp',
-  shortDescription: 'Winners archive for Ploofyz Bingo Night.',
+  shortDescription: '25+ players, four maps, solo and team rounds, and a memorable final challenge.',
   description:
-    'Congratulations to all Bingo Night winners. Thank you for joining the event and making the night active, chaotic, and fun.',
-  article: 'Hosted by Bibimbapqp, Ploofyz Bingo Night took place on 16 May 2026 from 9:30 PM to 11:30 PM and brought together 25+ players for a full night of fun, chaos, and competition. The event ran across Map 1 to Map 4, with each map offering a different level of challenge from easy to impossible(!) and keeping the night active from start to finish. From the solo opening round to the intense team-based matches and final impossible round, the event showed strong community participation and made Bingo Night one of the most memorable Ploofyz events so far.',
-  images: [
-    {
-      src: '/pavillion/bingo16may_v1.png',
-      alt: 'Ploofyz Bingo Night winners image 1',
-      caption: 'Bingo Night Winners - Map 1 to Map 3',
-    },
-    {
-      src: '/pavillion/bingo16may_v2.png',
-      alt: 'Ploofyz Bingo Night winners image 2',
-      caption: 'Bingo Night Winners - Map 4',
-    },
-    {
-      src: '/pavillion/bingo16may_v3.png',
-      alt: 'Ploofyz Bingo Night winners image 1',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v4.png',
-      alt: 'Ploofyz Bingo Night winners image 2',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v5.png',
-      alt: 'Ploofyz Bingo Night winners image 1',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v6.png',
-      alt: 'Ploofyz Bingo Night winners image 2',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v7.png',
-      alt: 'Ploofyz Bingo Night winners image 1',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v8.png',
-      alt: 'Ploofyz Bingo Night winners image 2',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v9.png',
-      alt: 'Ploofyz Bingo Night winners image 1',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v10.png',
-      alt: 'Ploofyz Bingo Night winners image 2',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v11.png',
-      alt: 'Ploofyz Bingo Night winners image 1',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v12.png',
-      alt: 'Ploofyz Bingo Night winners image 2',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v13.png',
-      alt: 'Ploofyz Bingo Night winners image 1',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v14.png',
-      alt: 'Ploofyz Bingo Night winners image 2',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v15.png',
-      alt: 'Ploofyz Bingo Night winners image 1',
-      caption: '',
-    },
-    {
-      src: '/pavillion/bingo16may_v16.png',
-      alt: 'Ploofyz Bingo Night winners image 2',
-      caption: '',
-    },
-  ],
+    'Hosted by Bibimbapqp, Ploofyz Bingo Night brought more than 25 players together for two hours of competition, teamwork, and community fun.',
+  news: {
+    intro: [
+      'Ploofyz Bingo Night took place on 16 May 2026 from 9:30 PM to 11:30 PM, bringing more than 25 players together for a lively night of bingo, teamwork, and friendly competition.',
+      'The event moved through four maps, each with its own difficulty. A solo opening round gave everyone a chance to settle in before the team matches raised the energy and the final impossible round put everyone to the test.',
+      'Thank you to everyone who joined and stayed active throughout the event. The enthusiasm, teamwork, and fun moments made the night a memorable part of the Ploofyz archive.',
+    ],
+    stats: [
+      { value: '25+', label: 'Players joined' },
+      { value: '4', label: 'Maps played' },
+      { value: '2 hrs', label: 'Event duration' },
+    ],
+    highlights: [
+      'Four maps ranging from easy to an impossible final challenge.',
+      'A solo opening round followed by competitive team matches.',
+      'Strong participation and plenty of active community moments from start to finish.',
+    ],
+    thankYou: [
+      'Thank you to every player who joined the event and helped make the night active, chaotic, and fun.',
+      'Thank you to Bibimbapqp for hosting and guiding everyone through all four maps.',
+    ],
+    closing:
+      'Congratulations to all of the Bingo Night winners, and thank you to everyone who helped turn the event into a Ploofyz memory worth keeping.',
+  },
+  article: '',
+  images: pavillionMedia.bingo16may.map((src, index) => ({
+    src,
+    alt: `Ploofyz Bingo Night on 16 May 2026, event image ${index + 1}`,
+    caption: bingoCaptions[index] ?? '',
+  })),
 };
+
