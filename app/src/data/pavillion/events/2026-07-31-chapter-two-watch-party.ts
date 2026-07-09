@@ -5,7 +5,7 @@ export const chapterTwoWatchParty31July2026: PavillionEvent = {
   title: 'Chapter 2 Watch Party & Early Access',
   category: 'Announcement',
   date: '2026-07-31',
-  dateLabel: '1 July 2026 · 9:00 PM MYT',
+  dateLabel: '31 July 2026 · 9:00 PM MYT',
   monthGroup: 'July 2026',
   updatedBy: 'Ploofyz Team',
   shortDescription: 'Watch Chapter 2 together on Discord, followed by ranked early access.',
